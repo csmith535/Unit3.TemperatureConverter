@@ -6,14 +6,18 @@ function describeTemperature(fahrenheit) {
   const celsius = convertToCelsius(fahrenheit);
 
   if (celsius < 0) {
-    return "It's very cold.";
+    return `That would be ${celsius}°C. It's very cold.`;
   } else if (celsius < 20) {
-    return "It's cold.";
+    return `That would be ${celsius}°C. It's cold.`;
   } else if (celsius < 30) {
-    return "It's warm.";
+    return `That would be ${celsius}°C. It's warm.`;
   } else if (celsius < 40) {
-    return "It's hot.";
+    return `That would be ${celsius}°C. It's hot.`;
   } else {
-    return "It's very hot.";
+    return `That would be ${celsius}°C. It's very hot.`;
   }
 }
+
+const fahrenheit = prompt("Enter a temperature in Fahrenheit:");
+const description = describeTemperature(fahrenheit);
+alert(description);
